@@ -40,6 +40,9 @@ export class HomeComponent implements OnInit {
   }
 
   public addNewToDo(newtodo: any): void {
+    if(!newtodo.value) {
+      return;
+    }
     this.data["pending"].push(newtodo.value);
     newtodo.value = "";
     localStorage.setItem("pending", JSON.stringify(this.data["pending"]));
