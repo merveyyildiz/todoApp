@@ -25,8 +25,11 @@
                       class="example-list"
                       (cdkDropListDropped)="drop($event)">
                       <div class="example-box" *ngFor="let item of data['pending']" cdkDrag>
-                        <img src="assets/image/hold.png" alt="hold" class="icon">
-                        {{item}}
+                        <span>
+                          <img src="assets/image/hold.png" alt="hold" class="icon">
+                          {{item}}
+                        </span>
+                        <img src="assets/image/trash.png" alt="trash" class="icon" (click)="deleteTodo('pending', item)">
                     </div>
                     </div>
                   </div>
@@ -42,8 +45,11 @@
                       class="example-list"
                       (cdkDropListDropped)="drop($event)">
                       <div class="example-box" *ngFor="let item of data['inprogress']" cdkDrag>
-                        <img src="assets/image/inprogress.png" alt="inprogress"class="icon">
-                        {{item}}
+                        <span>
+                          <img src="assets/image/inprogress.png" alt="inprogress"class="icon">
+                          {{item}}
+                        </span>
+                        <img src="assets/image/trash.png" alt="trash" class="icon" (click)="deleteTodo('inprogress', item)">
                     </div>
                     </div>
                   </div>
@@ -58,8 +64,11 @@
                       class="example-list"
                       (cdkDropListDropped)="drop($event)">
                       <div class="example-box" *ngFor="let item of data['done']" cdkDrag>
-                        <img src="assets/image/tick.png" alt="tick" class="icon">
-                        {{item}}
+                        <span>
+                          <img src="assets/image/tick.png" alt="tick" class="icon">
+                          {{item}}
+                        </span>
+                        <img src="assets/image/trash.png" alt="trash" class="icon" (click)="deleteTodo('done', item)">
                     </div>
                     </div>
                   </div>

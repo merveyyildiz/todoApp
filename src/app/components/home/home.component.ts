@@ -57,4 +57,8 @@ export class HomeComponent implements OnInit {
     });
   }
   
+  public deleteTodo(type: string, value: string): void {
+    this.data[type] = this.data[type].filter((item) => { return item != value });
+    localStorage.setItem(type, JSON.stringify(this.data[type]));
+  }
 }
