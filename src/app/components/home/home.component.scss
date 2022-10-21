@@ -17,10 +17,14 @@
         background-color: #81db3d;
         color: #fff;
     }
+    .mat-card {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
     .example-container {
-        width: 400px;
+        width: 320px;
         max-width: 100%;
-        margin: 0 25px 25px 0;
         display: inline-block;
         vertical-align: top;
       }
@@ -84,6 +88,14 @@
     .home {
         .input {
             width: 60%;
+        }
+        .example-form {
+          display: flex;
+          justify-content: space-evenly;
+          button {
+            height: 40px;
+            margin-top: 15px;
+          }
         }
     }
 }
